@@ -1,34 +1,51 @@
-<p align="center">
-<svg width="100%" height="180" viewBox="0 0 1200 180" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#6ea8ff">
-        <animate attributeName="offset" values="0;1;0" dur="6s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" stop-color="#7dffb3"/>
-    </linearGradient>
-  </defs>
+🚀 OpenClaw Desktop
 
-  <rect width="1200" height="180" fill="#0b0f14"/>
-  
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
-        font-family="Segoe UI, sans-serif"
-        font-size="48"
-        fill="url(#grad)"
-        font-weight="600">
-    OpenClaw Desktop
-  </text>
+A chat-first AI agent control panel built with Tauri (Rust) + React (Vite).
 
-  <text x="50%" y="75%" dominant-baseline="middle" text-anchor="middle"
-        font-family="Segoe UI, sans-serif"
-        font-size="18"
-        fill="#a8b3c7">
-    Tauri + React • AI Agent Control Panel • Local-First Architecture
-  </text>
+This desktop app provides:
 
-  <circle r="6" fill="#6ea8ff">
-    <animateMotion dur="8s" repeatCount="indefinite"
-      path="M0 160 Q600 20 1200 160"/>
-  </circle>
-</svg>
-</p>
+🧠 Local-first LLM routing (local stub → external API key)
+
+💬 Floating chat assistant UI
+
+🗂 Agent creation + approval flow
+
+📅 Scheduling system
+
+🗃 SQLite storage (agents, logs, settings)
+
+🛡 Sandbox / dry-run mode
+
+🔒 Approval required for risky/public actions
+
+🏗 Tech Stack
+
+Frontend: React + Vite
+
+Backend: Tauri (Rust)
+
+Database: SQLite (via r2d2_sqlite)
+
+State Management: React Context + Reducer
+
+LLM Router: Local stub + external provider support
+
+📁 Project Structure
+openclaw-desktop/
+├─ src/               # React frontend
+├─ src-tauri/         # Rust backend
+│  ├─ commands/       # Tauri commands
+│  ├─ services/       # LLM, DB, process logic
+│  ├─ models/         # Data models
+│  └─ migrations/     # SQLite schema
+└─ README.md
+
+⚙️ Requirements (Windows)
+
+Node.js 18+
+
+Rust (via rustup)
+
+Visual Studio Build Tools (Desktop development with C++)
+
+Windows 10/11 SDK
